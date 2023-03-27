@@ -1,12 +1,12 @@
 export default function bubbleSort(array: number[]): number[] {
-    
-    for (let i = 0; i < array.length; i++) {
-        for (let j = 0; j < array.length; j++) {
-            if (array[j] > array[j + 1]) {
-                [array[j], array[j + 1]] = [array[j + 1], array[j]];
+    const arr = [...array];
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[j] > arr[j + 1]) {
+                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
             }
         }
     }
 
-    return array;
+    return arr;
 }
